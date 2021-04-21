@@ -9,7 +9,7 @@ project(fuzzer_opencv)
 #find_package(OpenCV REQUIRED)
 #include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(fuzzer_opencv target.cpp png.cpp png.h mutator.cpp mutator.h)
+add_executable(fuzzer_opencv target.cpp png-mutator.cpp png-mutator.h mutator.cpp mutator.h)
 #target_link_libraries(fuzzer_opencv ${OpenCV_LIBS})
 
 target_compile_options(fuzzer_opencv
