@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+cmake_install.cmake
+CMakeCache.txt
+CMakeFiles
+Makefile
+fuzzer_opencv
+.idea
+Testing
+*.cbp
