@@ -13,6 +13,7 @@ void Png::load_raw_data(const std::vector<uint8_t>& data) {
     _raw.reserve(data.size());
     for (uint8_t e: data)
         _raw.push_back(e);
+    _parse_raw();
 }
 
 Png::Png(const char *filename) {
