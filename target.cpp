@@ -21,8 +21,7 @@
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size) {
     std::vector<uint8_t> data(Data, Data+Size);
-    Png png = Png();
-    png.load_raw_data(data);
+    Png png = Png(data);
 
     std::cout << "Width:  " << png.width() << std::endl;
     std::cout << "Height: " << png.height() << std::endl;

@@ -12,6 +12,7 @@
 
 class Png {
 public:
+
     class Chunk {
     public:
         uint32_t length;
@@ -20,14 +21,13 @@ public:
         uint32_t crc;
     };
 
-    Png() {};
+    Png(std::vector<uint8_t>& vector);
     Png(const char* filename);
+
     uint32_t width();
     uint32_t height();
 
     std::vector<Chunk> chunks;
-
-    void load_raw_data(const std::vector<uint8_t>& data);
 
 private:
 
